@@ -1,10 +1,10 @@
-# Shield AI: Cyber Threat Detection System
+# 🛡️ Shield AI — Cyber Threat Detection System
 
-![Node.js](https://img.shields.io/badge/Node.js-20+-green)
-![React](https://img.shields.io/badge/React-19-blue)
-![Python](https://img.shields.io/badge/Python-3.9+-yellow)
-![Gemini](https://img.shields.io/badge/Gemini-AI-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
+> 🚀 AI-powered Intrusion Detection System with real-time SOC dashboard and anomaly detection.
+🔍 Detects cyber threats using ML (Random Forest + Isolation Forest)  
+⚡ Real-time network monitoring dashboard  
+🧠 AI-powered threat analysis using Gemini  
+📊 Visual analytics for SOC teams  
 
 ## 🛡️ Project Overview
 **Shield AI** is a professional-grade, AI-powered Intrusion Detection System (IDS) that classifies network traffic as normal or malicious using the **UNSW-NB15** dataset. It combines supervised learning (Random Forest) for known threats and unsupervised learning (Isolation Forest) for zero-day anomaly detection.
@@ -17,6 +17,17 @@
 
 ---
 
+## 🔄 Data Flow
+
+1. Network traffic dataset (UNSW-NB15) is ingested
+2. Data is cleaned and preprocessed
+3. Features are engineered for ML models
+4. Random Forest classifies known attacks
+5. Isolation Forest detects unknown anomalies
+6. Threats are assigned severity levels
+7. Alerts are generated and logged
+8. Dashboard visualizes real-time threats
+
 ## 🏗️ System Architecture
 The system follows a modular architecture designed for scalability and professional deployment:
 
@@ -28,6 +39,7 @@ The system follows a modular architecture designed for scalability and professio
 > **Full Architecture Details**: See [docs/architecture.md](./docs/architecture.md)
 
 ---
+
 
 ## 📂 Project Structure
 ```text
@@ -83,6 +95,22 @@ The system achieves high-performance metrics on the UNSW-NB15 test set:
 
 ---
 
+## ⚠️ Limitations
+
+- Uses static dataset (not real-time packet capture)
+- Not integrated with SIEM tools (Splunk, ELK)
+- Requires retraining for new attack patterns
+
+## 📂 Dataset
+
+- Dataset: UNSW-NB15
+- Contains modern network traffic with labeled attack types:
+  - DoS
+  - Exploits
+  - Reconnaissance
+  - Backdoors
+- Used widely in cybersecurity research
+
 ## 🛠️ Installation
 ```bash
 # Clone the repo
@@ -96,6 +124,16 @@ python -m venv cyber_env
 source cyber_env/bin/activate
 pip install -r requirements.txt
 ```
+
+## 💼 For Recruiters
+
+This project demonstrates:
+
+- End-to-end ML pipeline development
+- Cybersecurity threat detection using AI
+- Real-time dashboard design (SOC-style)
+- Full-stack engineering (React + Node + Python)
+- Integration of LLMs (Gemini) for threat analysis
 
 ## 📜 License
 Distributed under the MIT License. See `LICENSE` for more information.
